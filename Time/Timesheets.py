@@ -65,9 +65,6 @@ class TestSearchCandidate(unittest.TestCase):
         #reset
         browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']//form//table/tbody/tr[1]/td[10]/button[@type='button']").click()
         #isi project
-        #kalo sebelumnya sudah ada project yg sama ganti nama projectnya
-        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']//form//table/tbody/tr[1]/td[1]/div//div[@class='oxd-autocomplete-wrapper']/div/input[@placeholder='Type for hints...']").send_keys(Keys.CONTROL,"a")
-        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']//form//table/tbody/tr[1]/td[1]/div//div[@class='oxd-autocomplete-wrapper']/div/input[@placeholder='Type for hints...']").send_keys(Keys.BACK_SPACE)
         browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']//form//table/tbody/tr[1]/td[1]/div//div[@class='oxd-autocomplete-wrapper']/div/input[@placeholder='Type for hints...']").send_keys("Freewave")
         time.sleep(2)
         #auto complete wrapper
