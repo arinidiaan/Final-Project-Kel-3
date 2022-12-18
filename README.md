@@ -15,3 +15,6 @@ Kelompok 3
 3. Maulidwifa Fairuz Khadafi Daniswara
 
 4. Rio Ozora Alaska Sembiring
+   a. Test Cases: PIM
+   b. Manual Testing: PIM
+   c. Automation Testing: PIM
