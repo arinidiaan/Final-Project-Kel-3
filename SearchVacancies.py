@@ -63,6 +63,8 @@ class TestSearchCandidate(unittest.TestCase):
         for i in range (len(record)) :
             #soalnya listnya bisa ganti2, jadi expectednya bisa aja berubah
             self.assertIn("Senior QA Lead", record[i].text)
+            print(record[i].text)
+
         time.sleep(3)
 
     def test_b_search_by_hiringManager(self) :
@@ -90,10 +92,11 @@ class TestSearchCandidate(unittest.TestCase):
         browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']//div[@class='oxd-table-filter-area']/form[@class='oxd-form']//button[@type='submit']").click()
         time.sleep(3)
         #cek hasil pencarian di record seharusnya ada yang valuenya sesuai yg dipilih 
-        record = browser.find_elements(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//div[@role='table']/div[4]//div[@role='row']/div[2]/div")
+        record = browser.find_elements(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//div[@role='table']/div[2]//div[@role='row']/div[4]/div")
         for i in range (len(record)) :
             #soalnya listnya bisa ganti2, jadi expectednya bisa aja berubah
             self.assertIn("Odis Adalwin", record[i].text)
+            print(record[i].text)
         time.sleep(3)
 
     def test_c_search_by_job_title(self) :
@@ -129,7 +132,7 @@ class TestSearchCandidate(unittest.TestCase):
         time.sleep(3)
 
         #cek hasil pencarian di record seharusnya ada yang valuenya sesuai yg dipilih 
-        record = browser.find_elements(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//div[@role='table']/div[3]//div[@role='row']/div[1]/div")
+        record = browser.find_elements(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//div[@role='table']/div[2]//div[@role='row']/div[3]/div")
         for i in range (len(record)) :
             #soalnya listnya bisa ganti2, jadi expectednya bisa aja berubah
             self.assertIn("QA Lead", record[i].text)
@@ -168,7 +171,7 @@ class TestSearchCandidate(unittest.TestCase):
         time.sleep(3)
 
         #cek hasil pencarian di record seharusnya ada yang valuenya sesuai yg dipilih 
-        record = browser.find_elements(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//div[@role='table']/div[5]//div[@role='row']/div[1]/div")
+        record = browser.find_elements(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//div[@role='table']/div[2]//div[@role='row']/div[5]/div")
         for i in range (len(record)) :
             #soalnya listnya bisa ganti2, jadi expectednya bisa aja berubah
             self.assertIn("Active", record[i].text)
