@@ -4,6 +4,9 @@ Kelompok 3
 - list nama kelompok yg ikut kerja
 
 1. Teofilus Kevin Baskara
+ a. Test Cases : MyInfo
+ b. Manual Testing : MyInfo
+ c. Automation Testing : MyInfo
 
 2. Dian Dwi Arini
  a. Test Cases: modul Recruitment, Time
