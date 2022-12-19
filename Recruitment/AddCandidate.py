@@ -29,14 +29,14 @@ class TestRecruitment(unittest.TestCase):
 
     
 
-    def test_a_add_candidates_field_valid_data(self): 
+    def test_b_add_candidates_field_valid_data(self): 
         # steps
         browser = self.browser #buka web browser
         browser.maximize_window()
         self.login()
         #go to recruitment menu
         browser.find_element(By.XPATH,"//div[@id='app']//aside[@class='oxd-sidepanel']/nav[@role='navigation']//ul[@class='oxd-main-menu']//a[@href='/web/index.php/recruitment/viewRecruitmentModule']/span[.='Recruitment']").click()
-        time.sleep(3)
+        time.sleep(10)
         #click add button
         browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']//div[@class='orangehrm-header-container']/button[@type='button']").click() 
         time.sleep(3)
@@ -85,67 +85,14 @@ class TestRecruitment(unittest.TestCase):
         self.assertEqual(browser.find_element(By.XPATH,"//div[@id='app']//form[@class='oxd-form']/div[3]/div/div[1]/div/span[.='Expected format: admin@example.com']").text,"Expected format: admin@example.com")
 
 
-    def test_b_add_candidates_blank_email_name(self) :
+    def test_a_save_candidate(self) :
         browser = self.browser
         browser.maximize_window()
 
         self.login()
         #go to recruitment menu
         browser.find_element(By.XPATH,"//div[@id='app']//aside[@class='oxd-sidepanel']/nav[@role='navigation']//ul[@class='oxd-main-menu']//a[@href='/web/index.php/recruitment/viewRecruitmentModule']/span[.='Recruitment']").click()
-        time.sleep(3)
-        #click add button
-        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']//div[@class='orangehrm-header-container']/button[@type='button']").click() 
-        time.sleep(3)
-        
-        #click save
-        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//form[@class='oxd-form']/div[@class='oxd-form-actions']/button[@type='submit']").click()
-        time.sleep(3)
-        #check required alert
-        self.assertEqual(browser.find_element(By.XPATH,"//div[@id='app']//form[@class='oxd-form']/div[1]/div/div[@class='oxd-grid-item oxd-grid-item--gutters']/div[@class='oxd-input-group']/div[@class='--name-grouped-field']/div[1]/span[.='Required']").text,"Required")
-        self.assertEqual(browser.find_element(By.XPATH,"//div[@id='app']//form[@class='oxd-form']/div[1]/div/div[@class='oxd-grid-item oxd-grid-item--gutters']/div[@class='oxd-input-group']/div[@class='--name-grouped-field']/div[3]/span[.='Required']").text,"Required")
-        self.assertEqual(browser.find_element(By.XPATH,"//div[@id='app']//form[@class='oxd-form']/div[3]/div/div[1]/div/span[.='Required']").text,"Required")
-
-    def a_browse_resume(self) :
-        browser = self.browser
-        browser.maximize_window()
-
-        self.login()
-        browser.get("https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates")
-        time.sleep(3)
-        #click add
-        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']//div[@class='orangehrm-header-container']/button[@type='button']").click()
-        time.sleep(2)
-        # browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//form[@class='oxd-form']/div[4]/div/div[@class='oxd-grid-item oxd-grid-item--gutters']/div/div//div[@class='oxd-file-button']").click()
-        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//form[@class='oxd-form']/div[4]/div/div[@class='oxd-grid-item oxd-grid-item--gutters']/div/div//div[@class='oxd-file-input-div']").send_keys("C:\\Arini\\QA Sanbercode\\Upload.txt")
-
-    def test_c_pick_later_date(self) :
-        browser = self.browser
-        browser.maximize_window()
-
-        self.login()
-        #go to recruitment menu
-        browser.find_element(By.XPATH,"//div[@id='app']//aside[@class='oxd-sidepanel']/nav[@role='navigation']//ul[@class='oxd-main-menu']//a[@href='/web/index.php/recruitment/viewRecruitmentModule']/span[.='Recruitment']").click()
-        time.sleep(3)
-        #click add button
-        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']//div[@class='orangehrm-header-container']/button[@type='button']/i").click() 
-        time.sleep(3)
-
-        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//form[@class='oxd-form']/div[5]/div/div[@class='oxd-grid-item oxd-grid-item--gutters']/div//input[@placeholder='yyyy-mm-dd']").click()
-        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//form[@class='oxd-form']/div[5]/div/div[@class='oxd-grid-item oxd-grid-item--gutters']/div//input[@placeholder='yyyy-mm-dd']").send_keys(Keys.CONTROL,"a")
-        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//form[@class='oxd-form']/div[5]/div/div[@class='oxd-grid-item oxd-grid-item--gutters']/div//input[@placeholder='yyyy-mm-dd']").send_keys(Keys.BACKSPACE)
-        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//form[@class='oxd-form']/div[5]/div/div[@class='oxd-grid-item oxd-grid-item--gutters']/div//input[@placeholder='yyyy-mm-dd']").send_keys("2022-12-31")
-        time.sleep(3)
-        self.assertEquals(browser.find_element(By.XPATH,"//div[@id='app']//form[@class='oxd-form']/div[5]/div/div[@class='oxd-grid-item oxd-grid-item--gutters']/div/span[.='Should be the current date or a previous date']").text,"Should be the current date or a previous date")
-        time.sleep(3)
-
-    def test_d_save_candidate(self) :
-        browser = self.browser
-        browser.maximize_window()
-
-        self.login()
-        #go to recruitment menu
-        browser.find_element(By.XPATH,"//div[@id='app']//aside[@class='oxd-sidepanel']/nav[@role='navigation']//ul[@class='oxd-main-menu']//a[@href='/web/index.php/recruitment/viewRecruitmentModule']/span[.='Recruitment']").click()
-        time.sleep(3)
+        time.sleep(10)
 
         #check jumlah record
         def len_rec() :
@@ -193,10 +140,10 @@ class TestRecruitment(unittest.TestCase):
         browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//form[@class='oxd-form']/div[@class='oxd-form-actions']/button[@type='submit']").click()
         time.sleep(3)
 
-        # #cek toast success
-        # toast = browser.find_elements(By.XPATH,"//div[@id='oxd-toaster_1']/div[@class='oxd-toast oxd-toast--success oxd-toast-container--toast']//p[@class='oxd-text oxd-text--p oxd-text--toast-title oxd-toast-content-text']")
-        # self.assertIn("Success", toast[0].text)
-        # print(toast[1].text)
+        #cek toast success
+        # toast = browser.find_element(By.CSS_SELECTOR,".oxd-text.oxd-text--p.oxd-text--toast-message.oxd-toast-content-text")
+        # self.assertIn("Success", toast.text)
+        # print(toast.text)
 
         #go to view candidate to check row bertambah
         browser.get("https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates")
@@ -207,6 +154,64 @@ class TestRecruitment(unittest.TestCase):
 
         
         
+    def test_b_add_candidates_blank_email_name(self) :
+        browser = self.browser
+        browser.maximize_window()
+
+        self.login()
+        #go to recruitment menu
+        browser.find_element(By.XPATH,"//div[@id='app']//aside[@class='oxd-sidepanel']/nav[@role='navigation']//ul[@class='oxd-main-menu']//a[@href='/web/index.php/recruitment/viewRecruitmentModule']/span[.='Recruitment']").click()
+        time.sleep(3)
+        #click add button
+        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']//div[@class='orangehrm-header-container']/button[@type='button']").click() 
+        time.sleep(3)
+        
+        #click save
+        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//form[@class='oxd-form']/div[@class='oxd-form-actions']/button[@type='submit']").click()
+        time.sleep(3)
+        #check required alert
+        self.assertEqual(browser.find_element(By.XPATH,"//div[@id='app']//form[@class='oxd-form']/div[1]/div/div[@class='oxd-grid-item oxd-grid-item--gutters']/div[@class='oxd-input-group']/div[@class='--name-grouped-field']/div[1]/span[.='Required']").text,"Required")
+        self.assertEqual(browser.find_element(By.XPATH,"//div[@id='app']//form[@class='oxd-form']/div[1]/div/div[@class='oxd-grid-item oxd-grid-item--gutters']/div[@class='oxd-input-group']/div[@class='--name-grouped-field']/div[3]/span[.='Required']").text,"Required")
+        self.assertEqual(browser.find_element(By.XPATH,"//div[@id='app']//form[@class='oxd-form']/div[3]/div/div[1]/div/span[.='Required']").text,"Required")
+
+    def a_browse_resume(self) :
+        browser = self.browser
+        browser.maximize_window()
+
+        self.login()
+        browser.get("https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates")
+        time.sleep(3)
+        #click add
+        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']//div[@class='orangehrm-header-container']/button[@type='button']").click()
+        time.sleep(2)
+        # browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//form[@class='oxd-form']/div[4]/div/div[@class='oxd-grid-item oxd-grid-item--gutters']/div/div//div[@class='oxd-file-button']").click()
+        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//form[@class='oxd-form']/div[4]/div/div[@class='oxd-grid-item oxd-grid-item--gutters']/div/div//div[@class='oxd-file-input-div']").send_keys("C:\\Arini\\QA Sanbercode\\Upload.txt")
+
+    def test_a_pick_later_date(self) :
+        browser = self.browser
+        browser.maximize_window()
+
+        self.login()
+        #go to recruitment menu
+        browser.find_element(By.XPATH,"//div[@id='app']//aside[@class='oxd-sidepanel']/nav[@role='navigation']//ul[@class='oxd-main-menu']//a[@href='/web/index.php/recruitment/viewRecruitmentModule']/span[.='Recruitment']").click()
+        time.sleep(3)
+        #click add button
+        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']//div[@class='orangehrm-header-container']/button[@type='button']/i").click() 
+        time.sleep(3)
+
+        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//form[@class='oxd-form']/div[5]/div/div[@class='oxd-grid-item oxd-grid-item--gutters']/div//input[@placeholder='yyyy-mm-dd']").click()
+        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//form[@class='oxd-form']/div[5]/div/div[@class='oxd-grid-item oxd-grid-item--gutters']/div//input[@placeholder='yyyy-mm-dd']").send_keys(Keys.CONTROL,"a")
+        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//form[@class='oxd-form']/div[5]/div/div[@class='oxd-grid-item oxd-grid-item--gutters']/div//input[@placeholder='yyyy-mm-dd']").send_keys(Keys.BACKSPACE)
+        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//form[@class='oxd-form']/div[5]/div/div[@class='oxd-grid-item oxd-grid-item--gutters']/div//input[@placeholder='yyyy-mm-dd']").send_keys("2022-12-31")
+        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']//form[@class='oxd-form']/div[5]/div/div[@class='oxd-grid-item oxd-grid-item--gutters']/div//div[.='Close']").click()
+        time.sleep(2)
+        #click save
+        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']//form[@class='oxd-form']/div[@class='oxd-form-actions']/button[@type='submit']").click()
+        time.sleep(3)
+        self.assertEquals(browser.find_element(By.XPATH,"//div[@id='app']//form[@class='oxd-form']/div[5]/div/div[@class='oxd-grid-item oxd-grid-item--gutters']/div/span[.='Should be the current date or a previous date']").text,"Should be the current date or a previous date")
+        time.sleep(3)
+
+
 
 
     def tearDown(self): 
