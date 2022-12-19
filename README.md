@@ -4,16 +4,16 @@ Kelompok 3
 - list nama kelompok yg ikut kerja
 
 1. Teofilus Kevin Baskara
- a. Test Cases : MyInfo
- b. Manual Testing : MyInfo
- c. Automation Testing : MyInfo
+ a. Test Cases : MyInfo, Performance
+ b. Manual Testing : MyInfo, Performance
+ c. Automation Testing : MyInfo, Performance
 
 2. Dian Dwi Arini
  a. Test Cases: modul Recruitment, Time
  b. Manual Testing: modul Recruitment, Time
  c. Automation Testing: 
-      modul Recruitment
-      modul Time
+      modul Recruitment : Add candidates, search candidates., search vacancies
+      modul Time : Timesheets, attendance, reports, project
       
 3. Maulidwifa Fairuz Khadafi Daniswara
   a. Test Cases : Admin
@@ -24,3 +24,6 @@ Kelompok 3
    a. Test Cases: PIM, Leave
    b. Manual Testing: PIM, Leave
    c. Automation Testing: PIM, Leave
+
+
+- link trello : https://trello.com/b/Ran0vsfu/final-project-kelompok-3
