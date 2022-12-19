@@ -26,7 +26,7 @@ class TestSearchCandidate(unittest.TestCase):
         browser.find_element(By.XPATH,"//div[@id='app']/div[@class='orangehrm-login-layout']/div[@class='orangehrm-login-layout-blob']//form[@action='/web/index.php/auth/validate']/div[3]/button[@type='submit']").click()
         time.sleep(3)
 
-    def a_my_attendance(self) :
+    def test_a_my_attendance(self) :
         browser = self.browser
         self.login()
         browser.maximize_window()
