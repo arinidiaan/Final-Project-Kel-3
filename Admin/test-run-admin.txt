@@ -1,0 +1,5 @@
+Test User Management = https://app.qase.io/public/report/24d9f62855e2fc537630e910b0b1e2191b9c4415
+Test Job = https://app.qase.io/public/report/c81e6d4d639d2f7a231ea8acdaa8b479abcdddce
+Test Organization = https://app.qase.io/public/report/1d8506172f279aaf926602a04d2be4f4c6b042aa
+Test Qualification = https://app.qase.io/public/report/2b66d8fe6933a6224d9c2127db5d0092182d3b35
+Test Nationalities = https://app.qase.io/public/report/51634948711eb8cc9f44dca638b2ffa90d2fda9f
