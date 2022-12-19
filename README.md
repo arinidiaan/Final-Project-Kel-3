@@ -24,3 +24,6 @@ Kelompok 3
    a. Test Cases: PIM, Leave
    b. Manual Testing: PIM, Leave
    c. Automation Testing: PIM, Leave
+
+
+- link trello : https://trello.com/b/Ran0vsfu/final-project-kelompok-3
