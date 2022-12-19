@@ -4,6 +4,9 @@ Kelompok 3
 - list nama kelompok yg ikut kerja
 
 1. Teofilus Kevin Baskara
+ a. Test Cases : MyInfo
+ b. Manual Testing : MyInfo
+ c. Automation Testing : MyInfo
 
 2. Dian Dwi Arini
  a. Test Cases: modul Recruitment, Time
@@ -15,6 +18,6 @@ Kelompok 3
 3. Maulidwifa Fairuz Khadafi Daniswara
 
 4. Rio Ozora Alaska Sembiring
-   a. Test Cases: PIM
-   b. Manual Testing: PIM
-   c. Automation Testing: PIM
+   a. Test Cases: PIM, Leave
+   b. Manual Testing: PIM, Leave
+   c. Automation Testing: PIM, Leave
