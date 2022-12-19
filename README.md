@@ -16,6 +16,9 @@ Kelompok 3
       modul Time
       
 3. Maulidwifa Fairuz Khadafi Daniswara
+  a. Test Cases : Admin
+  b. Manual Testing : Admin
+  c. Automation Testing : Admin
 
 4. Rio Ozora Alaska Sembiring
    a. Test Cases: PIM, Leave
