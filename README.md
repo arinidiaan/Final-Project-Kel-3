@@ -12,8 +12,8 @@ Kelompok 3
  a. Test Cases: modul Recruitment, Time
  b. Manual Testing: modul Recruitment, Time
  c. Automation Testing: 
-      modul Recruitment
-      modul Time
+      modul Recruitment : Add candidates, search candidates., search vacancies
+      modul Time : Timesheets, attendance, reports, project
       
 3. Maulidwifa Fairuz Khadafi Daniswara
   a. Test Cases : Admin
