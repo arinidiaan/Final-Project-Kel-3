@@ -26,7 +26,7 @@ class TestSearchCandidate(unittest.TestCase):
         # browser.find_element(By.XPATH,"//div[@id='app']/div[@class='orangehrm-login-layout']/div[@class='orangehrm-login-layout-blob']//form[@action='/web/index.php/auth/validate']/div[3]/button[@type='submit']").click()
         time.sleep(3)
 
-    def _a_project_report(self) :
+    def test_a_project_report(self) :
         browser = self.browser
         self.login()
         browser.maximize_window()
@@ -64,7 +64,7 @@ class TestSearchCandidate(unittest.TestCase):
         record = browser.find_elements(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']/div[@class='orangehrm-background-container']//revo-grid//revogr-viewport-scroll[@class='rgCol']//revogr-overlay-selection[@type='rgRow']/revogr-data[@type='rgRow']/div")
         self.assertIn("("+str(len(record))+") Records Found",browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']/div[@class='orangehrm-background-container']//span[@class='oxd-text oxd-text--span oxd-text--count']").text)
 
-    def b_emp_report(self) :
+    def test_b_emp_report(self) :
         browser = self.browser
         self.login()
         browser.maximize_window()
