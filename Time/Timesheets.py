@@ -100,7 +100,7 @@ class TestSearchCandidate(unittest.TestCase):
         time.sleep(2)
 
         #input employee name
-        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']//form[@class='oxd-form']//div[@class='oxd-grid-item oxd-grid-item--gutters']/div//div[@class='oxd-autocomplete-wrapper']/div/input[@placeholder='Type for hints...']").send_keys("Paul")
+        browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']//form[@class='oxd-form']//div[@class='oxd-grid-item oxd-grid-item--gutters']/div//div[@class='oxd-autocomplete-wrapper']/div/input[@placeholder='Type for hints...']").send_keys("Odis")
         time.sleep(2)
         browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']//form[@class='oxd-form']//div[@class='oxd-grid-item oxd-grid-item--gutters']/div//div[@class='oxd-autocomplete-wrapper']/div[2]/div[1]").click()
         time.sleep(2)
@@ -110,7 +110,7 @@ class TestSearchCandidate(unittest.TestCase):
         time.sleep(2)
 
         #direct to page
-        self.assertIn('Timesheet for ',browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']//form//h6").text)
+        self.assertIn('Timesheet for ',browser.find_element(By.XPATH,"//div[@id='app']/div[@class='oxd-layout']/div[@class='oxd-layout-container']/div[@class='oxd-layout-context']//span[@class='oxd-text oxd-text--span']").text)
 
     def test_d_view_timesheet_pending(self) :
         browser = self.browser 
