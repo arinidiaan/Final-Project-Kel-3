@@ -1,0 +1,1335 @@
+id,title,description,preconditions,postconditions,tags,priority,severity,type,behavior,automation,status,is_flaky,layer,steps_type,steps_actions,steps_result,steps_data,milestone_id,milestone,suite_id,suite_parent_id,suite,suite_without_cases,parameters
+,,,,,,,,,,,,,,,,,,,,3,,PIM,1
+,,,,,,,,,,,,,,,,,,,,8,3,"Search Employee",1
+,,,,,,,,,,,,,,,,,,,,13,3,"Add Employee",1
+,,,,,,,,,,,,,,,,,,,,16,3,Reports,1
+,,,,,,,,,,,,,,,,,,,,4,,Leave,1
+,,,,,,,,,,,,,,,,,,,,40,4,Leave,1
+,,,,,,,,,,,,,,,,,,,,41,40,"Leave List",1
+,,,,,,,,,,,,,,,,,,,,42,40,"Assign Leave",1
+,,,,,,,,,,,,,,,,,,,,5,,Time,1
+,,,,,,,,,,,,,,,,,,,,30,5,Timesheet,1
+,,,,,,,,,,,,,,,,,,,,34,5,Report,1
+,,,,,,,,,,,,,,,,,,,,32,5,Attendance,1
+,,,,,,,,,,,,,,,,,,,,35,5,"Project Info",1
+,,,,,,,,,,,,,,,,,,,,1,,Recruitment,1
+,,,,,,,,,,,,,,,,,,,,11,1,"Add Candidates",1
+,,,,,,,,,,,,,,,,,,,,12,1,"Search Candidates",1
+,,,,,,,,,,,,,,,,,,,,18,1,"Search Vacancies",1
+,,,,,,,,,,,,,,,,,,,,19,1,"Edit Candidate",1
+,,,,,,,,,,,,,,,,,,,,6,,"My Info",1
+,,,,,,,,,,,,,,,,,,,,14,6,"Personal Details",1
+,,,,,,,,,,,,,,,,,,,,37,6,"Contact Details",1
+,,,,,,,,,,,,,,,,,,,,38,6,"Emergency Contacts",1
+,,,,,,,,,,,,,,,,,,,,27,6,Dependents,1
+,,,,,,,,,,,,,,,,,,,,46,6,Immigration,1
+,,,,,,,,,,,,,,,,,,,,47,6,Job,1
+,,,,,,,,,,,,,,,,,,,,39,6,Salary,1
+,,,,,,,,,,,,,,,,,,,,29,6,"Tax Exemptions",1
+,,,,,,,,,,,,,,,,,,,,28,6,Report-to,1
+,,,,,,,,,,,,,,,,,,,,17,6,Qualifications,1
+,,,,,,,,,,,,,,,,,,,,7,,Performance,1
+,,,,,,,,,,,,,,,,,,,,43,7,KPIs,1
+,,,,,,,,,,,,,,,,,,,,44,7,Reviews,1
+,,,,,,,,,,,,,,,,,,,,45,7,Trackers,1
+,,,,,,,,,,,,,,,,,,,,21,,Admin,1
+,,,,,,,,,,,,,,,,,,,,22,21,"User Management",1
+,,,,,,,,,,,,,,,,,,,,23,21,Job,1
+,,,,,,,,,,,,,,,,,,,,24,21,Organization,1
+,,,,,,,,,,,,,,,,,,,,25,21,Qualification,1
+,,,,,,,,,,,,,,,,,,,,26,21,Nationalities,1
+3,"Search Employee by Name","Mencari karyawan berdasarkan nama","Berada pada https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList","Berhasil mendapatkan nama yang dicari",,medium,normal,functional,undefined,is-not-automated,actual,no,e2e,classic,"1. Input Nama pada field Employee name
+2. Klik button Search
+","1. 
+2. 
+","1. Alice Duval
+2. 
+",,,8,3,"Search Employee",,
+5,"Search Employee by ID",,"Berada pada https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList","Berhasil menemukan karyawan yang dicari",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Input id karyawan pada field Employee Id
+2. Klik button Search
+","1. 
+2. 
+","1. 0221
+2. 
+",,,8,3,"Search Employee",,
+8,"Search Employee by Name and Supervisor",,"Berada pada https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList","Berhasil mendapat karyawan yang dicari",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Input nama pada field Employee Name
+2. Input nama Supervisor
+3. Klik button search
+","1. 
+2. 
+3. 
+","1. Linda Jane Anderson
+2. John Smith
+3. 
+",,,8,3,"Search Employee",,
+10,"Search Employee by Name and Employment Status",,"Berada pada https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList","Berhasil mendapat nama karyawan yang dicari",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Input nama pada field Employee Name
+2. Pilih employment status
+3. Klik button search
+","1. 
+2. 
+3. 
+","1. Alice Duval
+2. Full-Time Contract
+3. 
+",,,8,3,"Search Employee",,
+13,"Search Employee with invalid Name and ID",,"Berada pada https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList","Mendapat pesan ""No records found""",,medium,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Input nama yang invalid pada field Employee Name
+2. Input id yang invalid pada field Employee Id
+3. Klik button search
+","1. 
+2. 
+3. 
+","1. Paol
+2. 0023
+3. 
+",,,8,3,"Search Employee",,
+20,"Adding Employee",,"Berada pada https://opensource-demo.orangehrmlive.com/web/index.php/pim/addEmployee","Berhasil menambahkan karyawan",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Input First Name
+2. Input Middle Name
+3. Input Last Name
+4. Klik button Save
+","1. 
+2. 
+3. 
+4. Mendapat notifikasi ""Succesfully Saved""
+","1. Jinggo
+2. Longor
+3. Kombur
+4. 
+",,,13,3,"Add Employee",,
+22,"Adding Employee with Login Details",,"Berada pada https://opensource-demo.orangehrmlive.com/web/index.php/pim/addEmployee","Berhasil menambah karyawan",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Input First Name
+2. Input Middle Name
+3. Input Last Name
+4. Toggle on switch button
+5. Input Username
+6. Pilih status
+7. Input password
+8. Input confirm password
+9. Klik button save
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. Mendapat notifikasi ""Succesfully saved""
+","1. Klang
+2. Agus
+3. Maryono
+4. 
+5. klangagus
+6. Enabled
+7. kinkjinK_009
+8. kinkjinK_009
+9. 
+",,,13,3,"Add Employee",,
+25,"Adding Employee with empty last name",,"Berada pada https://opensource-demo.orangehrmlive.com/web/index.php/pim/addEmployee","Memberikan pesan ""Required"" pada last name",,medium,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Input First Name
+2. Input Middle Name
+3. Klik button Save
+","1. 
+2. 
+3. 
+","1. Anto
+2. Jikjin
+3. 
+",,,13,3,"Add Employee",,
+41,"Make New Reports",,"Berada pada https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewDefinedPredefinedReports","Berhasil membuat reports",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik button Add
+2. Input Report Name
+3. Pilih Selection Criteria
+	1. Pilih Grade
+4. Klik button +
+5. Pilih Include
+6. Pilih display field group
+7. Pilih display field
+8. Klik button +
+9. Klik button Save
+","1. 
+2. 
+3. 
+	1. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+","1. 
+2. Test123
+3. Pay Grade
+	1. Grade 2
+4. 
+5. Current and Past Employees
+6. Contact Details
+7. Home Telephone
+8. 
+9. 
+",,,16,3,Reports,,
+45,"Search Reports",,"Berada pada halaman https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewDefinedPredefinedReports","Berhasil mencari reports",,medium,normal,functional,undefined,is-not-automated,actual,no,e2e,classic,"1. Input report name yang ingin dicari
+2. Klik button search
+","1. 
+2. 
+","1. All Employee Sub Unit Hierarchy Report
+2. 
+",,,16,3,Reports,,
+46,"Open Reports",,"Berada pada halaman https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewDefinedPredefinedReports","Berhasil membuka reports",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik button icon file-text
+","1. 
+","1. 
+",,,16,3,Reports,,
+47,"Edit Reports Name",,"Berada pada halaman https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewDefinedPredefinedReports",,,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik button icon pensil
+2. Input nama reports yang ingin diganti
+3. Klik button save
+","1. 
+2. 
+3. 
+","1. 
+2. 
+3. 
+",,,16,3,Reports,,
+48,"Delete Reports",,"Berada pada halaman https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewDefinedPredefinedReports","Berhasil menghapus reports",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik button icon trash bin
+2. Klik tombol Yes, Delete
+","1. 
+2. 
+","1. 
+2. 
+",,,16,3,Reports,,
+80,"Edit Reports to add Display Fields",,"Berada pada halaman https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewDefinedPredefinedReports","Berhasil menambahkan kriteria display fields",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Menekan button edit pada daftar reports
+2. Memilih display field group
+3. Memilih display fields
+4. Menekan button plus (+)
+5. Menekan button save
+","1. 
+2. 
+3. 
+4. 
+5. 
+","1. 
+2. Contact details
+3. Home Telephone
+4. 
+5. 
+",,,16,3,Reports,,
+105,"Search Leave List",,"Berada pada halaman https://opensource-demo.orangehrmlive.com/web/index.php/leave/viewLeaveList","Berhasil menampilkan Leave List",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Pilih tanggal awal
+2. Pilih tanggal akhir
+3. Pilih show leave with status
+4. Klik button Search
+","1. 
+2. 
+3. 
+4. 
+","1. 2022-11-01
+2. 2022-12-31
+3. Pending Approval
+4. 
+",,,41,40,"Leave List",,
+106,"Aproving Leave Request",,"Berada pada halaman https://opensource-demo.orangehrmlive.com/web/index.php/leave/viewLeaveList","Berhasil approve request",,medium,normal,other,positive,is-not-automated,actual,no,unknown,classic,"1. Klik button approve
+","1. 
+","1. 
+",,,41,40,"Leave List",,
+107,"Rejecting Leave Request",,,,,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik button reject
+","1. 
+","1. 
+",,,41,40,"Leave List",,
+108,"Assign Leave",,"Berada pada halaman https://opensource-demo.orangehrmlive.com/web/index.php/leave/assignLeave","Berhasil assign leave",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Input employee name
+2. Pilih leave-type
+3. Pilih tanggal awal
+4. Pilih tanggal akhir
+5. Pilih partial days
+6. Pilih duration
+7. Klik tombol Assign
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+","1. Linda Jane Anderson
+2. CAN - Vacation
+3. 2022-12-26
+4. 2022-12-29
+5. Start day only
+6. Half-Day Afternoon
+7. 
+",,,42,40,"Assign Leave",,
+109,"Assign Leave with Empty Employee Name",,"Berada pada halaman https://opensource-demo.orangehrmlive.com/web/index.php/leave/assignLeave","Required to fill employee name",,medium,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Pilih leave-type
+2. Pilih tanggal awal
+3. Pilih tanggal akhir
+4. Pilih partial days
+5. Pilih duration
+6. Klik tombol Assign
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+","1. CAN - Vacation
+2. 2022-12-26
+3. 2022-12-29
+4. Start day only
+5. Half-Day Afternoon
+6. 
+",,,42,40,"Assign Leave",,
+110,"Assign Leave with Not Selecting Leave Type",,"Berada pada halaman https://opensource-demo.orangehrmlive.com/web/index.php/leave/assignLeave","Required to choose Leave Type",,medium,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Input employee name
+2. Pilih tanggal awal
+3. Pilih tanggal akhir
+4. Pilih partial days
+5. Pilih duration
+6. Klik tombol Assign
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+","1. Linda Jane Anderson
+2. 2022-12-26
+3. 2022-12-29
+4. Start day only
+5. Half-Day Afternoon
+6. 
+",,,42,40,"Assign Leave",,
+111,"Assign Leave with Not Selecting Date",,"Berada pada halaman https://opensource-demo.orangehrmlive.com/web/index.php/leave/assignLeave","Required to choose Date",,medium,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Input employee name
+2. Pilih leave-type
+3. Klik tombol Assign
+","1. 
+2. 
+3. 
+","1. Linda Jane Anderson
+2. CAN - Vacation
+3. 
+",,,42,40,"Assign Leave",,
+77,"View with Blank Employee Name","Negative case View with Blank Employee Name",,,,undefined,normal,functional,undefined,to-be-automated,actual,no,unknown,classic,"1. Click View
+","1. 1. Show Reuired alert
+","1. 
+",,,30,5,Timesheet,,
+79,"View with Valid Employee Name","View with Valid Employee Name","There's related record in the databas",,,undefined,normal,functional,undefined,to-be-automated,actual,no,unknown,classic,"1. Input Employee Name
+2. Click View
+","1. 1. Show option 
+2. Enable to click option
+2. 1. redirect to page https://opensource-demo.orangehrmlive.com/web/index.php/time/viewTimesheet/employeeId/{id}
+2. Show Timesheet for \<Employee Name>
+","1. Paul
+2. 
+",,,30,5,Timesheet,,
+81,"View Button in Record Table","check View Button in Record Table","There area data in records table",,,undefined,normal,functional,undefined,to-be-automated,actual,no,unknown,classic,"1. Click View Button
+","1. Redirect to Timesheet related employee
+","1. 
+",,,30,5,Timesheet,,
+82,"My Timesheet Menu","check dropdown menu in My Timesheet Menu",,,,undefined,normal,functional,undefined,is-not-automated,actual,no,unknown,classic,"1. Click Reports button
+2. Click My Timesheet Menu
+","1. 1. Show option menu
+2. 1. redirect to page https://opensource-demo.orangehrmlive.com/web/index.php/time/viewMyTimesheet
+","1. 
+2. 
+",,,30,5,Timesheet,,
+89,"Employee Timesheet Menu","check dropdown menu in Employee Timesheet Menu",,,,undefined,normal,functional,undefined,is-not-automated,actual,no,unknown,classic,"1. Click My Timesheet
+2. Click Employee Timesheet
+","1. 1. Show option menu
+2. 1. redirect to page https://opensource-demo.orangehrmlive.com/web/index.php/time/viewEmployeeTimesheet
+","1. 
+2. 
+",,,30,5,Timesheet,,
+96,"Edit Timesheet","Edit Timesheet successfully",,,,undefined,normal,other,undefined,to-be-automated,actual,no,unknown,classic,"1. Click My Timesheet
+2. Click Edit
+3. Input Project
+4. Click Activity
+5. Input time
+6. Click Save
+","1. go to page https://opensource-demo.orangehrmlive.com/web/index.php/time/viewMyTimesheet
+2. go to page Edit My Timesheet
+3. 1. Enable to edit field
+2. Show option if type something
+3. Enable to click option
+4. 1. Show option menu
+2. enable to click
+5. Enable to edit
+6. Success Edit Timesheet
+","1. 
+2. 
+3. Apache Software Foundation
+4. QA Testing
+5. 17:00 at 18 Dec
+6. 
+",,,30,5,Timesheet,,
+88,"Project Report Menu","Check Project Report Menu in Reports menu",,,,undefined,normal,functional,undefined,is-not-automated,actual,no,unknown,classic,"1. Click Reports button
+2. Click Project Report Menu
+3. Input project name
+4. Pick date
+5. Click View
+","1. 1. Show option menu
+2. 1. redirect to page https://opensource-demo.orangehrmlive.com/web/index.php/time/displayProjectReportCriteria
+3. 1. Enable to edit
+2. Show auto complete option
+4. 1.. Enable to edit
+2\. Enable to pick date
+5. 1. show records
+","1. 
+2. 
+3. 
+4. 
+5. 
+",,,34,5,Report,,
+90,"Employee Report Menu","Check Employee Report menu in Reports menu",,,,undefined,normal,functional,undefined,is-not-automated,actual,no,unknown,classic,"1. Click Reports button
+2. Click Employee Report Menu
+3. Input employee name
+4. Input project name
+5. Select actvity name
+6. Pick date
+7. Click view
+","1. 1. Show option menu
+2. 1. redirect to page https://opensource-demo.orangehrmlive.com/web/index.php/time/displayEmployeeReportCriteria
+3. 1. enable to edit and click
+2. show auto complete option
+4. 1. enable to edit and click
+2. show auto complete option
+5. 1. show option menu
+2. enable to select option
+6. 1. enable to edit
+2. enable to select date
+7. show related records
+","1. 
+2. 
+3. Odis
+4. Coca-cola
+5. Bug Fixes
+6. From 2022-12-01
+To 2022-12-18
+7. 
+",,,34,5,Report,,
+91,"Attendance Summary Menu","Check Attendance Summary menu in Reports menu",,,,undefined,normal,functional,undefined,is-not-automated,actual,no,unknown,classic,"1. Click Reports button
+2. Click Attendance Summary Menu
+3. Input employee name
+4. Select job title
+5. Select Sub-unit
+6. Select Employee Status
+7. Pick date
+8. Click View
+","1. 1. Show option menu
+2. 1. redirect to page https://opensource-demo.orangehrmlive.com/web/index.php/time/displayAttendanceSummaryReportCriteria
+3. 1. enable to edit and click
+2. show auto complete option
+4. 1. show option menu
+2. enable to select option
+5. 1. show option menu
+2. enable to select option
+6. 1. show option menu
+2. enable to select option
+7. 1. enable to edit
+2. enable to select date
+8. show related records
+","1. 
+2. 
+3. Odis
+4. HR Manager
+5. Human Resource
+6. Full-time contract
+7. From 2022-07-01
+To 2022-07-30
+8. 
+",,,34,5,Report,,
+83,"My Records Menu","check funtionality of My Records Menu",,,,undefined,normal,functional,undefined,is-not-automated,actual,no,unknown,classic,"1. Click My Attendance menu
+2. Click My Records menu
+3. Pick date
+4. Click View
+","1. 1. Show option menu
+2. 1. redirect to page https://opensource-demo.orangehrmlive.com/web/index.php/attendance/viewMyAttendanceRecord
+3. 1. Enable to click and pick date
+4. 1. Show record
+","1. 
+2. 
+3. 2022-12-18
+4. 
+",,,32,5,Attendance,,
+84,"Punch In","Check functionality of Punch In/Out","Already Punch out",,,undefined,normal,functional,undefined,is-not-automated,actual,no,unknown,classic,"1. Click My Attendance menu
+2. Click Punch In/Out menu
+","1. 1. Show option menu
+2. 1. redirect to page https://opensource-demo.orangehrmlive.com/web/index.php/attendance/punchIn
+","1. 
+2. 
+",,,32,5,Attendance,,
+85,"Employee Record Menu","Check functionality of Employee Record menu",,,,undefined,normal,functional,undefined,is-not-automated,actual,no,unknown,classic,"1. Click My Attendance menu
+2. Click Employee Record menu
+","1. 1. Show option menu
+2. 1. redirect to page https://opensource-demo.orangehrmlive.com/web/index.php/attendance/viewAttendanceRecord
+","1. 
+2. 
+",,,32,5,Attendance,,
+86,"Configuration Menu","Check functionality of Confirguration menu",,,,undefined,normal,functional,undefined,is-not-automated,actual,no,unknown,classic,"1. Click My Attendance menu
+2. Click Confirguration menu
+3. Click toggle
+","1. 1. Show option menu
+2. 1. redirect to page https://opensource-demo.orangehrmlive.com/web/index.php/attendance/configure
+3. 1. enable to on/off toggle
+","1. 
+2. 
+3. 
+",,,32,5,Attendance,,
+101,"Punch Out","Check functionality of Punch In/Out","Already Punch In",,,undefined,normal,functional,undefined,is-not-automated,actual,no,unknown,classic,"1. Click My Attendance menu
+2. Click Punch In/Out menu
+","1. 1. Show option menu
+2. 1. redirect to page https://opensource-demo.orangehrmlive.com/web/index.php/attendance/punchOut
+","1. 
+2. 
+",,,32,5,Attendance,,
+92,"Customer Menu","check funtionality of Customer Menu",,,,undefined,normal,functional,undefined,is-not-automated,actual,no,unknown,classic,"1. Click Project Info menu
+2. Click Customer menu
+3. Click add
+4. Input Name
+5. Input description
+6. Click save
+","1. 1. Show option menu
+2. 1. redirect to page https://opensource-demo.orangehrmlive.com/web/index.php/time/viewCustomers
+2. Show some records
+3. redirected to https://opensource-demo.orangehrmlive.com/web/index.php/time/addCustomer
+4. 1. enable to edit
+5. 1. enable to edit
+6. Success add customer
+","1. 
+2. 
+3. 
+4. PT Indosat
+5. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+6. 
+",,,35,5,"Project Info",,
+93,"Projects Menu","Check functionality of Projects",,,,undefined,normal,functional,undefined,is-not-automated,actual,no,unknown,classic,"1. Click Project Info menu
+2. Click Projects menu
+3. InputCustomer Name
+4. Input project
+5. Input project admin
+6. Click Search
+","1. 1. Show option menu
+2. 1. redirect to page https://opensource-demo.orangehrmlive.com/web/index.php/time/viewProjects
+3. 1. show auto complete
+2. enable to edit
+4. 1. show auto complete
+2. enable to edit
+5. 1. show auto complete
+2. enable to edit
+6. Show record (if any)
+","1. 
+2. 
+3. Coca cola
+4. Coke - Phase 1
+5. Odis Adalwin
+6. 
+",,,35,5,"Project Info",,
+4,"Check Candidates Field with Valid Data",https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates,,,,high,normal,functional,undefined,automated,actual,no,unknown,classic,"1. Click on Add button
+2. Fill in First Name
+3. Fill in Middle Name
+4. Fill in Last Name
+5. Select Vacancy
+6. Fill in Email
+7. Fill in Contact Number
+8. Fill in Keyword
+9. Fill in Notes
+","1. 1. Button is clickable
+2. Redirect to https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate
+2. 1. Enable to edit First Name field
+3. 1. Enable to edit Middle Name field
+4. 1. Enable to edit Las Name field
+5. 1. Enable to click drop down menu
+2. Enable to select vacancy
+3. Show selected vacancy
+6. 1. Enable to edit email
+7. 1. Enable to edit contact number
+8. 1. Enable to edit keyword
+9. 1. Enable to edit notes
+","1. 
+2. Jennie
+3. Ruby
+4. Jane
+5. Software Engineer
+6. a@example.com
+7. 085725100620
+8. Account
+9. belum kirim cv
+",,,11,1,"Add Candidates",,
+9,"Check Candidates Field with Invalid Email",,,,,undefined,normal,functional,undefined,automated,actual,no,unknown,classic,"1. Click on Add button
+2. Select Vacancy
+3. Fill in Email
+","1. 1. Button is clickable
+2. Redirect to https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate
+2. 1. Enable to click drop down menu
+2. Enable to select vacancy
+3. Show selected vacancy
+3. 1. Enable to edit email
+2. Show alert : ""Expected format : admin@example.com""
+","1. 
+2. Junior Account Assistant
+3. a@example
+",,,11,1,"Add Candidates",,
+16,"Check Candidates Field with Blank Name and Email",,,,,undefined,normal,functional,undefined,automated,actual,no,unknown,classic,"1. Click on Add button
+2. Click Save
+","1. 1. Button is clickable
+2. Redirect to https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate
+2. 1. Show alert ""Required"" below First Name field, Last Name field and Email field
+","1. 
+2. 
+",,,11,1,"Add Candidates",,
+17,"Check Browse Functionality on Resume",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Click on ""Browse""
+2. Select accepted format file
+","1. 1. Enable to click
+2. Open File Explorer
+2. 1. Success select file
+","1. 
+2. file with format .docx, .txt, .doc, .odt, .pdf, .rtf
+",,,11,1,"Add Candidates",,
+18,"Check Upload Icon Functionality on Resume",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Click on Upload icon
+2. Select accepted format file
+","1. 1. Enable to click
+2. Open File Explorer
+2. 1. Success select file
+","1. 
+2. file with format .docx, .txt, .doc, .odt, .pdf, .rtf
+",,,11,1,"Add Candidates",,
+19,"Check Upload Resume with Invalid Format File",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Click on ""Browse""/Upload icon
+2. Select accepted format file
+","1. 1. Enable to click
+2. Open File Explorer
+2. 1. Failed to select file
+2. Show alert : ""File type not allowed""
+","1. 
+2. other than following format file : .docx, .txt, .doc, .odt, .pdf, .rtf
+",,,11,1,"Add Candidates",,
+26,"Check Calender in Date of Application","Check calender in Date of Application with date after today should be show alert",,,,undefined,normal,other,undefined,automated,actual,no,unknown,classic,"1. Click on Calender
+2. Click on Back Arrow
+3. Click on Forth Arrow
+4. Click later date than today
+","1. 1. Show Calender
+2. Enable to edit
+2. Arrow is clickable
+3. Arrow is clickable
+4. 1. Show selected date
+2. Show alert : ""Should be the current date or a previous date""
+","1. 
+2. 
+3. 
+4. 2022-12-31
+",,,11,1,"Add Candidates",,
+49,"Save Add Candidates",https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate,"fill in at least required field",,,undefined,normal,functional,undefined,automated,actual,no,unknown,classic,"1. Click Save
+2. go to menu view candidate
+","1. 1. Sukses save
+2. Show message : 
+
+""Success 
+Successfully Updated""
+2. 1. record bertambah
+","1. 
+2. 
+",,,11,1,"Add Candidates",,
+1,"Search Candidates by Job Title","Search by Job Title - https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates","There's related Job Title record in database",,,undefined,normal,functional,undefined,is-not-automated,actual,no,unknown,classic,"1. Click on drop-down menu on Job Title
+2. Click Search button
+","1. 1. Drop-down menu is clickable
+2. Scrollable
+3. Enable to select Job Title
+2. Show related record
+","1. Software Engineer
+2. 
+",,,12,1,"Search Candidates",,
+27,"Search Candidates by Vacancy","Search candidates by vacancy - https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates","There's related record in the database",,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Click on drop-down menu on Vacancy
+2. click search
+","1. 1. Drop-down menu is clickable
+2. Scrollable
+3. Enable to select Vacancy
+2. 1. show related record
+","1. Senior QA Lead
+2. 
+",,,12,1,"Search Candidates",,
+28,"Search Candidates by Hiring Manager","search candidates by hiring manager - https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates","There's related data in the database",,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Click on drop-down menu on Hiring Manager
+2. Click Search button
+","1. 1. Drop-down menu is clickable
+2. Scrollable
+3. Enable to select Hiring Manager
+4. Show all option
+2. Show related record
+","1. Linda Jane Anderson
+2. 
+",,,12,1,"Search Candidates",,
+29,"Search Candidates by Status","search candidated by status - https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates","There's related data in the database",,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Click on drop-down menu on Status
+2. Click Search
+","1. 1. Drop-down menu is clickable
+2. Scrollable
+3. Enable to select Status
+2. Show related data
+","1. Rejected
+2. 
+",,,12,1,"Search Candidates",,
+33,"Search Candidates by Candidate Name","Search Candidates by Candidate Name - https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates","There's related data in the database",,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Input Candidate Name
+2. Click Search button
+","1. 1. Enable to edit Candidate Name field
+2. Show related record
+","1. Chris Harris
+2. 
+",,,12,1,"Search Candidates",,
+34,"Search Candidates by Keyword","Search Candidates by Keyword - https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates","There's related data in the database",,,undefined,normal,functional,undefined,is-not-automated,actual,no,unknown,classic,"1. Input keyword
+2. Click Search button
+","1. Enable to edit field
+2. Show related record
+","1. Assistant
+2. 
+",,,12,1,"Search Candidates",,
+35,"Search Candidates by Date of Application","Search Candidates by Date of Application - https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates","There's related data in the database",,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Select date
+2. Click Search button
+","1. 1. Calender is clickable
+2. Enable to select From date
+3. Enable to select To date
+4. Enable to edit the date
+2. Show related record
+","1. From 2022-07-01 
+To 2022-07-31
+2. 
+",,,12,1,"Search Candidates",,
+36,"Search Candidates by Method of Application","Search Candidates by Method of Application - https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates","There's related data in database",,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Click on drop-down menu on Method of Application
+2. Click Search button
+","1. 1. Drop-down menu is clickable
+2. Scrollable
+3. Enable to select Method of Application
+2. Show related record
+","1. Manual
+2. 
+",,,12,1,"Search Candidates",,
+37,"Search Vacancies by Status","Search Vacancies by Status - https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewJobVacancy","There's related data in the database",,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Click on drop-down menu on Status
+2. Click Search button
+","1. 1. Drop-down menu is clickable
+2. Scrollable
+3. Enable to select Status
+2. Show related record
+","1. Closed
+2. 
+",,,18,1,"Search Vacancies",,
+38,"Search Vacancies by Job Title","Search Vacancies by Job Title - https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewJobVacancy","There's related data in the database",,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Click on drop-down menu on Job Title
+2. Click Search button
+","1. 1. Drop-down menu is clickable
+2. Scrollable
+3. Enable to select Job Title
+2. Show related record
+","1. IT Manager
+2. 
+",,,18,1,"Search Vacancies",,
+39,"Search Vacancies by Vacancy","Search Vacancies by Vacancy - https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewJobVacancy","There's related data in the database",,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Click on drop-down menu on Vacancy
+2. Click Search button
+","1. 1. Drop-down menu is clickable
+2. Scrollable
+3. Enable to select Vacancy
+2. Show related record
+","1. Senior QA Lead
+2. 
+",,,18,1,"Search Vacancies",,
+40,"Search Vacancies by Hiring Manager","Search Vacancies by Hiring Manager - https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewJobVacancy","There's related data in the database",,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Click on drop-down menu on Hiring Manager
+2. Click Search button
+","1. 1. Drop-down menu is clickable
+2. Scrollable
+3. Enable to select Hiring Manager
+2. Show related record
+","1. Kevin Mathews
+2. 
+",,,18,1,"Search Vacancies",,
+42,"Check Edit Candidate with Status Shortlisted","Check Edit Candidate","Status : Shortlisted",,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Click on Eye icon in Record
+2. Click on Schedule Interview button
+","1. 1. redirect to https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/5
+2. 1. Button is clickable
+2. Directed to Schedule Interview Page
+","1. 
+2. 
+",,,19,1,"Edit Candidate",,
+43,"Check Edit Candidate with Status Intervoew Failed","Check Edit Candidate","Status : Intervoew Failed",,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Click on Eye icon in Record
+2. Click on Reject button
+3. Click on Save
+","1. 1. redirect to https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/addCandidate/5
+2. 1. Button is clickable
+3. 1. Button is clickable
+2. Status change to Rejected
+","1. 
+2. 
+3. 
+",,,19,1,"Edit Candidate",,
+14,"Change Gender",,"Login pada URL [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/ ""https://opensource-demo.orangehrmlive.com/"")","Berhasil mengubah gender sesuai pilihan",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu My Info
+2. Pada bagian radio button Gender, pilih gender
+3. Klik tombol Save
+","1. 
+2. 
+3. 
+","1. 
+2. Female
+3. 
+",,,14,6,"Personal Details",,
+21,"Input Contact Details","Mengisi informasi kontak profile","Login pada URL [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/ ""https://opensource-demo.orangehrmlive.com/"")","Berhasil mengisi informasi kontak",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu My Info
+2. Pilih sub menu Contact Details
+3. Isi alamat pada kolom Street 1
+4. Isi nomor telefon pada kolom Telephone
+5. Isi email
+6. Klik button Save
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+","1. 
+2. 
+3. Olympus
+4. +61485872892
+5. Olympus@gmail.com
+6. 
+",,,37,6,"Contact Details",,
+97,"Delete Address","Menghapus Address Street 1","Login pada URL https://opensource-demo.orangehrmlive.com/","Berhasil menghapus Address Street1",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu My Info
+2. Klik sub menu Contact Details
+3. Hapus text pada textbox Street1 di Address
+4. Klik button Save
+","1. 
+2. 
+3. 
+4. Berhasil menghapus text di Address Street1
+","1. 
+2. 
+3. 
+4. 
+",,,37,6,"Contact Details",,
+98,"Delete mobile number","Menghapus nomor telephone mobile","Login pada URL https://opensource-demo.orangehrmlive.com/","Berhasil menghapus nomor telephone mobile",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu My info
+2. Klik sub menu Contact Details
+3. Pada textbox Mobile Telephone, hapus text
+4. Klik button save
+","1. 
+2. 
+3. 
+4. 
+","1. 
+2. 
+3. 
+4. 
+",,,37,6,"Contact Details",,
+99,"Delete Email","Menghapus email yang sudah ada pada contact details","Login pada URL https://opensource-demo.orangehrmlive.com/","Berhasil menghapus email",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu My info
+2. Klik sub menu Contact Details
+3. Hapus data pada textbox email
+4. Klik button Save
+","1. 
+2. 
+3. 
+4. 
+","1. 
+2. 
+3. 
+4. 
+",,,37,6,"Contact Details",,
+23,"Create Emergency Contacts","Menambah kontak darurat","Login pada URL [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/ ""https://opensource-demo.orangehrmlive.com/"")","Berhasil menambah kontak darurat",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu My info
+2. Pada bagian sub menu pilih Emergency Contacts
+3. Klik tombol +Add pada bagian Assigned Emergency Contacts
+4. Isi nama kontak
+5. Isi Relationship
+6. Isi nomor telephone
+7. Klik button Save
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+","1. 
+2. 
+3. 
+4. Erick
+5. Friends
+6. 07700 900111
+7. 
+",,,38,6,"Emergency Contacts",,
+102,"Add emergency contact without relationship",,"Login pada URL [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/ ""https://opensource-demo.orangehrmlive.com/"")","Required to fill Relationship",,medium,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Klik menu My info
+2. Klik sub menu Emergency Contacts
+3. Klik tombol +Add pada bagian Assigned Emergency Contacts
+4. Isi nama kontak
+5. Isi nomor telephone
+6. Klik button Save
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+","1. 
+2. 
+3. 
+4. Erick
+5. 07700 900111
+6. 
+",,,38,6,"Emergency Contacts",,
+103,"Add Emergency Contact without Phone Number",,"Login pada URL https://opensource-demo.orangehrmlive.com/","Required to fill one phone number",,medium,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Klik menu My info
+2. Klik sub menu Emergency Contacts
+3. Klik tombol +Add pada bagian Assigned Emergency Contacts
+4. Isi nama kontak
+5. Isi Relationship
+6. Klik button Save
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+","1. 
+2. 
+3. 
+4. Erick
+5. Friends
+6. 
+",,,38,6,"Emergency Contacts",,
+24,"Add Dependents",,"Login pada URL [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/ ""https://opensource-demo.orangehrmlive.com/"")","menambah data dependents dengan nama dan status relationship",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu My info
+2. Pada bagian sub menu pilih Dependents
+3. Klik tombol +Add pada bagian add Dependents
+4. Isi nama
+5. Memilih Relationship di dropdown Relationship
+6. Isi Relationship pada textbox ""Please Specify""
+7. Klik button Save
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. Menyimpan nama Aaron dan status Relationship Wife
+","1. 
+2. 
+3. 
+4. Aaron
+5. Other
+6. Wife
+7. 
+",,,27,6,Dependents,,
+74,"Add dependents but invalid relationship",,"Login pada URL [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/ ""https://opensource-demo.orangehrmlive.com/"")","Required to fill relationship",,medium,normal,functional,negative,is-not-automated,actual,no,e2e,classic,"1. Klik menu My info
+2. Pada bagian sub menu pilih Dependents
+3. Klik tombol +Add pada bagian add Dependents
+4. Isi nama
+5. Klik button Save
+","1. 
+2. 
+3. 
+4. 
+5. Menampilkan ""Required"" pada Relationship
+","1. 
+2. 
+3. 
+4. Hamilton
+5. 
+",,,27,6,Dependents,,
+30,"Add Immigration Record",,"Login pada URL https://opensource-demo.orangehrmlive.com/","Berhasil menambah record immigration",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu My info
+2. Pada sub menu pilih Immigration
+3. Klik tombol +Add pada Assigned Immigration Records
+4. Pilih dokumen apa yang sesuai pada radiobutton
+5. Isi nomor dokumen
+6. Klik button Save
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+","1. 
+2. 
+3. 
+4. Passport
+5. 039677847
+6. 
+",,,46,6,Immigration,,
+31,"View Job Details","Melihat detail pekerjaan","Login pada URL [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/ ""https://opensource-demo.orangehrmlive.com/"")","Berhasil menampilkan halaman detail pekerjaan",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu My info
+2. Pada sub menu pilih Job
+","1. 
+2. Menampilkan Job detail
+","1. 
+2. 
+",,,47,6,Job,,
+104,"View Salary",,"Login pada URL https://opensource-demo.orangehrmlive.com/","Berhasil menampilkan halaman salary",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu My info
+2. Klik sub menu Salary
+","1. 
+2. 
+","1. 
+2. 
+",,,39,6,Salary,,
+76,"View Tax Exemptions","Menampilkan halaman Tax Exemptions","Login pada URL [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/ ""https://opensource-demo.orangehrmlive.com/"")","Berhasil menampilkan halaman Tax Exemptions",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu My Info
+2. Klik sub menu Tax Exemptions
+","1. 
+2. 
+","1. 
+2. 
+",,,29,6,"Tax Exemptions",,
+75,"View Report-to","Melihat halaman report","Login pada URL [https://opensource-demo.orangehrmlive.com/](https://opensource-demo.orangehrmlive.com/ ""https://opensource-demo.orangehrmlive.com/"")","Berhasil menampilkan halaman report",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu My Info
+2. Klik sub menu Report-to
+","1. 
+2. Menampilkan halaman report
+","1. 
+2. 
+",,,28,6,Report-to,,
+32,"Add Work Experience","Mengisi pengalaman kerja di profile","Login to URL https://opensource-demo.orangehrmlive.com/",,,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu My Info
+2. Klik sub menu Qualifications
+3. Klik button +Add pada Qualification Work Experience
+4. Isi nama Perusahaan, Job title
+5. Isi Job Title
+6. Klik button Save
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+","1. 
+2. 
+3. 
+4. Red Bull Racing Formula One Team
+5. FINANCIAL ACCOUNTANT
+6. 
+",,,17,6,Qualifications,,
+112,"Search KPIs","Mencari Key Performance Indicator berdasarkan job title","Login pada URL https://opensource-demo.orangehrmlive.com/","Berhasil menyaring berdasarkan job title",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu Performance
+2. Klik dropdown sub menu Configure
+3. Klik KPIs
+4. Pada dropdown Job title, pilih job title yang sesuai
+5. Klik button Search
+","1. 
+2. 
+3. 
+4. 
+5. 
+","1. 
+2. 
+3. 
+4. Database Administrator
+5. 
+",,,43,7,KPIs,,
+2,"My Reviews",,"Login pada URL https://opensource-demo.orangehrmlive.com/","Menampilkan halaman My Reviews",,medium,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Klik Menu Performance
+2. Pada sub menu Manage Reviews, pilih My Reviews
+","1. 
+2. 
+","1. 
+2. 
+",,,44,7,Reviews,,
+113,"My Trackers","dapat melihat halaman performance tracker","Login pada URL https://opensource-demo.orangehrmlive.com/","Berhasil menampilkan halaman Performance Trackers",,medium,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Klik menu Performance
+2. Klik sub menu My Trackers
+3. Klik button view
+","1. 
+2. 
+3. 
+","1. 
+2. 
+3. 
+",,,45,7,Trackers,,
+50,"Search Admin by Username",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Input nama pada kolom username
+2. klik tombol search
+","1. 
+2. 
+","1. Admin
+2. 
+",,,22,21,"User Management",,
+51,"Search Admin by User Role",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. pilih user role
+2. klik tombol search
+","1. 
+2. 
+","1. Admin
+2. 
+",,,22,21,"User Management",,
+52,"Search by Employee Name",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. input nama pada kolom Employee name
+2. klik tombol search
+","1. 
+2. 
+","1. Alice Duval
+2. 
+",,,22,21,"User Management",,
+53,"Search Admin by Status",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Pilih status
+2. klik tombol search
+","1. 
+2. 
+","1. Enabled
+2. 
+",,,22,21,"User Management",,
+54,"Search User Management by Invalid Username and Employee Name",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. input nama pada kolom username
+2. input nama pada kolom employee name
+3. klik tombol search
+","1. 
+2. 
+3. 
+","1. adgdg
+2. asdjbaj
+3. 
+",,,22,21,"User Management",,
+55,"Add User by User Management",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Klik tombol +Add
+2. klik kolom user role
+3. klik kolom status
+4. input nama Employee name
+5. input nama username
+6. input password
+7. input confirm password
+8. klik tombol save
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. Mendapat notifikasi ""Succesfully Saved""
+","1. 
+2. Admin
+3. enabled
+4. Alice Duval
+5. Zacking
+6. Hahahaa1.
+7. Hahahaa1.
+8. 
+",,,23,21,Job,,
+56,"Add Job by Job Titles",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. klik tombol add
+2. input job title
+3. input Job description
+4. upload file job specification
+5. klik tombol save
+","1. 
+2. 
+3. 
+4. 
+5. Mendapat notifikasi ""Succesfully Saved""
+","1. 
+2. Quality Control
+3. Mengecek barang produk
+4. file with format .docx, .txt, .doc, .odt, .pdf, .rtf
+5. 
+",,,23,21,Job,,
+57,"Add Job by Pay Grade",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. klik add
+2. input nama pay grade
+3. klik add currency
+4. Pilih currency
+5. input minimum salary
+6. input maximum salary
+7. klik tombol save
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. Mendapat notifikasi ""Succesfully Saved""
+","1. 
+2. Grade X
+3. 
+4. IDR - Indonesia Rupiah
+5. 2000000
+6. 20000000
+7. 
+",,,23,21,Job,,
+58,"Add Job by Employment status",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. klik add
+2. input employment status
+3. klik tombol save
+","1. 
+2. 
+3. Mendapat notifikasi ""Succesfully Saved""
+","1. 
+2. Magang
+3. 
+",,,23,21,Job,,
+59,"Add job by Job Category",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. klik add
+2. input nama job categories
+3. klik save
+","1. 
+2. 
+3. Mendapat notifikasi ""Succesfully Saved""
+","1. 
+2. IT Man
+3. 
+",,,23,21,Job,,
+60,"Add job by work shifts",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. klik add
+2. input shift name
+3. input jam kerja mulai
+4. input jam kerja selesai
+5. input assigned employees
+6. klik save
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. Mendapat notifikasi ""Succesfully Saved""
+","1. 
+2. Shifting
+3. 09.00 AM
+4. 05.00 PM
+5. Alive Duval
+6. 
+",,,23,21,Job,,
+61,"Add job work shift with empty working hours",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. klik add
+2. input shift name
+3. input assigned employees
+4. klik tombol save
+","1. 
+2. 
+3. 
+4. 
+","1. 
+2. shifshifan
+3. 
+4. 
+",,,23,21,Job,,
+62,"Edit Organization by general information",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Toggle on switch button
+2. input organization name
+3. input register number
+4. input Tax ID
+5. input phone
+6. input fax
+7. input email
+8. input address street 1
+9. input city
+10. input province
+11. input postal code
+12. pilih country
+13. klik save
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. 
+11. 
+12. 
+13. Mendapat notifikasi ""Succesfully Updated""
+","1. 
+2. Demo HRM
+3. 12345678
+4. 11223344
+5. 123321123
+6. 12211221
+7. a@example.com
+8. JL.Indonesia.raya
+9. Indonesia
+10. Java Place
+11. 1945
+12. indonesian
+13. 
+",,,24,21,Organization,,
+63,"Search organization Locations by name",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. input Name
+2. klik tombol search
+","1. 
+2. 
+","1. Texas R&D
+2. 
+",,,24,21,Organization,,
+64,"Search organization Location by city",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. input city name
+2. klik tombol search
+","1. 
+2. 
+","1. Texas
+2. 
+",,,24,21,Organization,,
+65,"Search organization location by country",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. pilih country
+2. klik tombol search
+","1. 
+2. 
+","1. United States
+2. 
+",,,24,21,Organization,,
+66,"Add organization by Location",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. klik add
+2. input name
+3. input city
+4. input province
+5. input postal code
+6. select country
+7. input phone
+8. input fax
+9. input address
+10. klik save
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+9. 
+10. Mendapat notifikasi ""Succesfully Saved""
+","1. 
+2. Sanber
+3. indonesian
+4. Java place
+5. 1945
+6. indonesia
+7. 123456789
+8. 11223344
+9. JL.Javaplace.indonesia
+10. 
+",,,24,21,Organization,,
+67,"Add organization  by structure",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Klik tombol edit
+2. klik add
+3. input unit id
+4. input name
+5. klik save
+","1. 
+2. 
+3. 
+4. 
+5. Mendapat notifikasi ""Succesfully Saved""
+","1. Toggle on switch button
+2. 
+3. 112233
+4. IT Man
+5. 
+",,,24,21,Organization,,
+68,"Add qualification by skill",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. klik add
+2. input name
+3. input description
+4. klik tombol save
+","1. 
+2. 
+3. 
+4. Mendapat notifikasi ""Succesfully Saved""
+","1. 
+2. IT Man
+3. Programer
+4. 
+",,,25,21,Qualification,,
+69,"Add qualification by education",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. klik add
+2. input levels
+3. klik tombol save
+","1. 
+2. 
+3. Mendapat notifikasi ""Succesfully Saved""
+","1. 
+2. SMA
+3. 
+",,,25,21,Qualification,,
+70,"Add qualification by licenses",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. klik add
+2. input name license
+3. klik save
+","1. 
+2. 
+3. Mendapat notifikasi ""Succesfully saved""
+","1. 
+2. Certificated Sanbercode
+3. 
+",,,25,21,Qualification,,
+71,"Add qualification by leaguages",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. klik add
+2. input name leaguage
+3. klik tombol save
+","1. 
+2. 
+3. Mendapat notifikasi ""Succesfully saved""
+","1. 
+2. indonesia
+3. 
+",,,25,21,Qualification,,
+72,"Add qualification by memberships",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. klik add
+2. input name membership
+3. klik tombol save
+","1. 
+2. 
+3. Mendapat notifikasi ""Succesfully saved""
+","1. 
+2. Sanbercode
+3. 
+",,,25,21,Qualification,,
+73,"Add nationality",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. klik add
+2. input name nationality
+3. klik tombol save
+","1. 
+2. 
+3. Mendapat notifikasi ""Succesfully saved""
+","1. 
+2. Indonesia
+3. 
+",,,26,21,Nationalities,,
